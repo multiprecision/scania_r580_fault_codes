@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'Null0Void'
+            storeFile file('C:/Users/User/keystore0.jks')
+            storePassword 'Null0Void'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+    defaultConfig {
+        applicationId 'com.kppmining.msr580codes'
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName '2.0.0'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:27.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation('com.mikepenz:materialdrawer:6.0.1@aar') {
+        transitive = true
+    }
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+    implementation 'com.android.support:support-annotations:27.0.0'
+    implementation 'com.android.support:design:27.0.0'
+    compile 'com.github.barteksc:android-pdf-viewer:2.8.0'
+    testCompile 'junit:junit:4.12'
+}

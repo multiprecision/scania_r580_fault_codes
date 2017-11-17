@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2017 Samuel Ivan Gunadi.
+     All rights reserved.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout">
+
+            <Spinner
+                android:id="@+id/spinner_system"
+                android:layout_width="150sp"
+                android:layout_height="52dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/edit_code"
+                android:layout_width="147dp"
+                android:layout_height="49dp"
+                android:layout_alignBottom="@+id/spinner_system"
+                android:layout_toEndOf="@+id/spinner_system"
+                android:layout_toRightOf="@+id/spinner_system"
+                android:ems="10"
+                android:hint="Code"
+                android:inputType="number" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="202dp"
+            android:layout_height="52dp"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/button_background"
+            android:text="Search"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/text_not_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_search"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="placeholder_text"
+            android:textColor="#ff0000" />
+
+    </RelativeLayout>
+</LinearLayout>
